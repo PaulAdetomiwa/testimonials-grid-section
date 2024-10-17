@@ -19,7 +19,7 @@
     }
 
     .main {
-      width: 80%;
+      width: 70%;
       margin: 100px auto;
       display: flex;
       flex-direction: column;
@@ -152,6 +152,61 @@
     .qtext5 {
       padding: 20px;
       color: hsl(219, 29%, 14%);
+    }
+
+    @media (max-width: 768px) {
+      .main {
+        width: 90%;
+        margin: 50px auto;
+      }
+
+      .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        height: auto;
+      }
+
+      .first-half {
+        grid-template-rows: auto;
+      }
+
+      .top, .bottom {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+      }
+
+      .first-quarter,
+      .second-quarter,
+      .third-quarter,
+      .fourth-quarter,
+      .fifth {
+        height: auto;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .main {
+        width: 100%;
+        margin: 20px auto;
+      }
+
+      .container {
+        gap: 10px;
+      }
+
+      .author img {
+        width: 25px;
+        height: 25px;
+      }
+
+      .qtext1, .qtext2, .qtext3, .qtext4, .qtext5 {
+        padding: 10px;
+        font-size: 12px;
+      }
+
+      .review {
+        font-size: 13px;
+      }
     }
 
     .attribution { 
