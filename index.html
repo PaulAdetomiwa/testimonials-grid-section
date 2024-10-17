@@ -19,6 +19,8 @@
     }
 
     .main {
+      min-width: 70%;
+      max-width: 90%;
       width: 70%;
       margin: 100px auto;
       display: flex;
@@ -27,7 +29,7 @@
     }
 
     .container {
-      width: calc(100% + 20px);
+      max-width: calc(100% + 20px);
       display: grid;
       grid-template-columns: 75% auto;
       gap: 20px;
@@ -55,12 +57,16 @@
       background-position: 80% 0;
       background-size: auto;
       box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+      min-height: 250px;
+      max-height: 250px;
     }
 
     .second-quarter {
       border-radius: 10px;
       background-color: hsl(217, 19%, 35%);
       box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+      min-height: 250px;
+      max-height: 250px;
     }
 
     .bottom {
@@ -74,12 +80,16 @@
       border-radius: 10px;
       background-color: hsl(0, 0%, 100%);
       box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+      min-height: 250px;
+      max-height: 250px;
     }
 
     .fourth-quarter {
       border-radius: 10px;
       background-color: hsl(219, 29%, 14%);
       box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+      min-height: 250px;
+      max-height: 250px;
     }
 
     .fifth {
@@ -87,6 +97,8 @@
       background-color: hsl(0, 0%, 100%);
       box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
       height: 100%;
+      min-height: 250px;
+      max-height: 520px;
     }
 
     .qtext1 {
@@ -154,7 +166,37 @@
       color: hsl(219, 29%, 14%);
     }
 
+    @media (max-width: 1300px) {
+      .main {
+        width: 90%;
+      }
+    }
+
+    @media (max-width: 1080px) {
+      body {
+        font-size: 11px;
+      }
+
+      .main {
+        width: 90%;
+      }
+    }
+
+    @media (max-width: 845px) {
+      body {
+        font-size: 9px;
+      }
+
+      .main {
+        width: 90%;
+      }
+    }
+
     @media (max-width: 768px) {
+      body {
+        font-size: 13px;
+      }
+
       .main {
         width: 90%;
         margin: 50px auto;
@@ -181,6 +223,12 @@
       .fourth-quarter,
       .fifth {
         height: auto;
+        min-height: 250px;
+        padding: 10px;
+      }
+
+      .fifth {
+        margin-top: 10px;
       }
     }
 
